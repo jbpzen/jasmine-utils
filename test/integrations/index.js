@@ -46,6 +46,7 @@ import './to-be-empty.spec.js';
 import './to-be-even-number.spec.js';
 import './to-be-false.spec.js';
 import './to-be-float.spec.js';
+import './to-be-frozen.spec.js';
 import './to-be-in-range.spec.js';
 import './to-be-instance-of.spec.js';
 import './to-be-integer.spec.js';

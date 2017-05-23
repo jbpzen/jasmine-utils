@@ -80,3 +80,4 @@ export {toBeDOMElementWithAttributes} from './to-be-dom-element-with-attributes.
 export {toBeDOMElementWithClasses} from './to-be-dom-element-with-classes.js';
 export {toBeOneOf} from './to-be-one-of.js';
 export {toEqualOneOf} from './to-equal-one-of.js';
+export {toBeFrozen} from './to-be-frozen.js';

@@ -86,6 +86,7 @@ import {
   toBeDOMElementWithClasses,
   toBeOneOf,
   toEqualOneOf,
+  toBeFrozen,
 } from './core/matchers/index.js';
 
 import {
@@ -167,6 +168,7 @@ const jasmineMatchers = {
   toBeDOMElementWithClasses: createMatcher(toBeDOMElementWithClasses),
   toBeOneOf: createMatcher(toBeOneOf),
   toEqualOneOf: createMatcher(toEqualOneOf),
+  toBeFrozen: createMatcher(toBeFrozen),
 };
 
 /**
