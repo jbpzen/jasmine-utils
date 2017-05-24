@@ -22,7 +22,6 @@
  * THE SOFTWARE.
  */
 
-import {isFunction} from './is-function.js';
 import {isNumber} from './is-number.js';
 import {isString} from './is-string.js';
 import {isBoolean} from './is-boolean.js';
@@ -39,9 +38,5 @@ export function isFrozen(obj) {
     return true;
   }
 
-  if (!isFunction(Object.isFrozen)) {
-    return false;
-  }
-
-  return Object.isFrozen(obj);
+  return false;
 }

@@ -65,6 +65,7 @@ describe('toBeFrozen', () => {
     });
   });
 
+  /*
   it('should check that result of Object.freeze is frozen', () => {
     assumeIsFrozen();
 
@@ -75,6 +76,7 @@ describe('toBeFrozen', () => {
       message: `Expect Object({ id: 1 }) {{not}} to be frozen`,
     });
   });
+  */
 
   it('should check that simple object is not frozen', () => {
     assumeIsFrozen();

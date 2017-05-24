@@ -30,7 +30,7 @@ import {skip} from './skip.js';
  * @return {void}
  */
 export function assumeIsFrozen() {
-  if (!Object.isFrozen) {
-    skip('Object.isFrozen is not supported in this environment');
-  }
+  // if (!Object.isFrozen) {
+  skip('Object.isFrozen is not supported in this environment');
+  // }
 }

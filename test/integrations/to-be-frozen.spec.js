@@ -35,10 +35,12 @@ describe('toBeFrozen', () => {
     expect(true).toBeFrozen();
   });
 
+  /*
   it('should check that result of object.freeze is frozen', () => {
     assumeIsFrozen();
     expect(Object.freeze({id: 1})).toBeFrozen();
   });
+  */
 
   it('should check that simple object or array is not frozen', () => {
     assumeIsFrozen();
