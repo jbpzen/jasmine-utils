@@ -39,7 +39,7 @@ export function isFrozen(obj) {
   }
 
   if (!Object.isFrozen) {
-    console.log('Object.isFrozen is not supported in this environment');
+    // console.log('Object.isFrozen is not supported in this environment');
     return false;
   }
 
