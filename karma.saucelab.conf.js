@@ -109,6 +109,7 @@ module.exports = (config) => {
     concurrency: 1,
     captureTimeout: 120000,
     browserNoActivityTimeout: 60000,
+    transports: ['polling'],
     customLaunchers: browsers,
 
     sauceLabs: {
