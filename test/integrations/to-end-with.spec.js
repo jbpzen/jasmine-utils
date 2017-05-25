@@ -33,17 +33,5 @@ describe('toEndWith', () => {
     expect('foo').not.toEndWith('f');
     expect('foo').not.toEndWith('fo');
     expect('foo').not.toEndWith('bar');
-
-    // Deprecated matcher
-    spyOn(console, 'warn');
-
-    expect('foo').toEndsWith('foo');
-    expect('foo').toEndsWith('oo');
-    expect('foo').toEndsWith('o');
-    expect('foo').not.toEndsWith('f');
-    expect('foo').not.toEndsWith('fo');
-    expect('foo').not.toEndsWith('bar');
-
-    expect(console.warn).toHaveBeenCalled();
   });
 });
