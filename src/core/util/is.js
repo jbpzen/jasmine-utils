@@ -22,14 +22,16 @@
  * THE SOFTWARE.
  */
 
-import {is} from './is.js';
+import {tagName} from './tag-name.js';
 
 /**
- * Check that a given value is a function.
+ * Check that a given value is of given type: the type is the name outputted
+ * with `Object.prototype.toString` call.
  *
- * @param {*} value Value to check.
- * @return {boolean} `true` if `value` is a function, `false` otherwise.
+ * @param {*} obj Value to check.
+ * @param {string} type Expected type.
+ * @return {boolean} `true` if `obj` is of given type, `false` otherwise.
  */
-export function isFunction(value) {
-  return is(value, 'Function');
+export function is(obj, type) {
+  return tagName(obj) === `[object ${type}]`;
 }
