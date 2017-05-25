@@ -106,7 +106,7 @@ module.exports = (config) => {
 
     reporters: ['dots', 'saucelabs'],
     browsers: _.keys(browsers),
-    concurrency: 1,
+    concurrency: 3,
     captureTimeout: 120000,
     browserNoActivityTimeout: 60000,
     browserDisconnectTimeout: 20000,
