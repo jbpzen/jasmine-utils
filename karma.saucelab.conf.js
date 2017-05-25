@@ -108,7 +108,7 @@ module.exports = (config) => {
     browsers: _.keys(browsers),
     concurrency: 1,
     captureTimeout: 120000,
-    browserNoActivityTimeout: 45000,
+    browserNoActivityTimeout: 60000,
     customLaunchers: browsers,
 
     sauceLabs: {
