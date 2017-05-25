@@ -29,6 +29,7 @@
 const path = require('path');
 const includePaths = require('rollup-plugin-includepaths');
 const babel = require('rollup-plugin-babel');
+const stripBanner = require('rollup-plugin-strip-banner');
 const conf = require('./conf.js');
 
 module.exports = (config) => ({
@@ -100,7 +101,6 @@ module.exports = (config) => ({
 
   preprocessors: {
     'test/**/*.js': ['rollup'],
-    'src/**/*.js': ['rollup'],
   },
 
   // Rollup test configuration
@@ -112,6 +112,7 @@ module.exports = (config) => ({
         path: [__dirname],
       }),
 
+      stripBanner(),
       babel(),
     ],
   },
