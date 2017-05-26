@@ -41,7 +41,11 @@ module.exports = (config) => ({
   ],
 
   files: [
-    path.join(conf.test, 'index.js'),
+    path.join(conf.test, 'jasmine', 'index.js'),
+    path.join(conf.test, 'matchers', 'index.js'),
+    path.join(conf.test, 'spies', 'index.js'),
+    path.join(conf.test, 'util', 'index.js'),
+    path.join(conf.test, 'integrations', 'index.js'),
   ],
 
   exclude: [
@@ -106,12 +110,9 @@ module.exports = (config) => ({
   // Rollup test configuration
   rollupPreprocessor: {
     format: 'iife',
-    moduleName: 'jasmine-utils', // required for 'iife' format
+    moduleName: 'JasmineUtils', // required for 'iife' format
     plugins: [
-      includePaths({
-        path: [__dirname],
-      }),
-
+      includePaths({path: [__dirname]}),
       stripBanner(),
       babel(),
     ],
