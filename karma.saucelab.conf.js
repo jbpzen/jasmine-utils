@@ -115,6 +115,10 @@ module.exports = (config) => {
     logLevel: config.LOG_DEBUG,
     customLaunchers: browsers,
 
+    client: {
+      captureConsole: false,
+    },
+
     sauceLabs: {
       build: `TRAVIS #${process.env.TRAVIS_BUILD_NUMBER} (${process.env.TRAVIS_BUILD_ID})`,
       startConnect: false,
