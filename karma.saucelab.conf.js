@@ -112,6 +112,7 @@ module.exports = (config) => {
     browserDisconnectTimeout: 20000,
     browserDisconnectTolerance: 1,
     customLaunchers: browsers,
+    logLevel: config.LOG_DEBUG,
 
     // Disable console.log since it may fail on travis.
     browserConsoleLogOptions: {
