@@ -26,8 +26,10 @@
  * Karma Configuration.
  */
 
+const path = require('path');
 const _ = require('lodash');
-const conf = require('./karma.common.conf.js');
+const conf = require('./conf.js');
+const commonConf = require('./karma.common.conf.js');
 
 const browsers = {
   SL_Win10_edge: {
@@ -100,7 +102,11 @@ const browsers = {
 };
 
 module.exports = (config) => {
-  config.set(_.extend(conf(config), {
+  config.set(_.extend(commonConf(config), {
+    files: [
+      path.join(conf.test, '**', '*.spec.js'),
+    ],
+
     autoWatch: false,
     singleRun: true,
 
