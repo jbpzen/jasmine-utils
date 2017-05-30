@@ -104,7 +104,7 @@ module.exports = (config) => {
     autoWatch: false,
     singleRun: true,
 
-    reporters: ['dots', 'saucelabs'],
+    reporters: ['saucelabs'],
     browsers: _.keys(browsers),
     concurrency: 1,
     captureTimeout: 120000,
