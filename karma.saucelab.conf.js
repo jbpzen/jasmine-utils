@@ -114,7 +114,7 @@ module.exports = (config) => {
     browsers: _.keys(browsers),
     concurrency: 1,
     captureTimeout: 120000,
-    browserNoActivityTimeout: 60000,
+    browserNoActivityTimeout: 120000,
     browserDisconnectTimeout: 120000,
     browserDisconnectTolerance: 1,
     customLaunchers: browsers,
