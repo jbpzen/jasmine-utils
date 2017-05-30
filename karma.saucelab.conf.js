@@ -113,6 +113,16 @@ module.exports = (config) => {
     browserDisconnectTolerance: 1,
     customLaunchers: browsers,
 
+    // Disable console.log since it may fail on travis.
+    browserConsoleLogOptions: {
+      level: 'error',
+      terminal: false,
+    },
+
+    client: {
+      captureConsole: false,
+    },
+
     sauceLabs: {
       build: `TRAVIS #${process.env.TRAVIS_BUILD_NUMBER} (${process.env.TRAVIS_BUILD_ID})`,
       startConnect: false,
