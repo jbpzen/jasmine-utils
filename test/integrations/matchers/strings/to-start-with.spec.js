@@ -33,17 +33,5 @@ describe('toStartWith', () => {
     expect('foo').not.toStartWith('o');
     expect('foo').not.toStartWith('oo');
     expect('foo').not.toStartWith('bar');
-
-    // Deprecated matcher
-    spyOn(console, 'warn');
-
-    expect('foo').toStartsWith('foo');
-    expect('foo').toStartsWith('fo');
-    expect('foo').toStartsWith('f');
-    expect('foo').not.toStartsWith('o');
-    expect('foo').not.toStartsWith('oo');
-    expect('foo').not.toStartsWith('bar');
-
-    expect(console.warn).toHaveBeenCalled();
   });
 });

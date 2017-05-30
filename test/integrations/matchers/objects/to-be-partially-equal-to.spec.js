@@ -32,14 +32,6 @@ describe('toBePartiallyEqualTo', () => {
 
     expect(a).toBePartiallyEqualTo(b);
     expect(a).not.toBePartiallyEqualTo(c);
-
-    // Deprecated matcher
-    spyOn(console, 'warn');
-
-    expect(a).toBePartiallyEqualsTo(b);
-    expect(a).not.toBePartiallyEqualsTo(c);
-
-    expect(console.warn).toHaveBeenCalled();
   });
 
   it('should pass with arrays', () => {
@@ -58,13 +50,5 @@ describe('toBePartiallyEqualTo', () => {
 
     expect(array1).toBePartiallyEqualTo(array2);
     expect(array1).not.toBePartiallyEqualTo(array3);
-
-    // Deprecated matcher
-    spyOn(console, 'warn');
-
-    expect(array1).toBePartiallyEqualsTo(array2);
-    expect(array1).not.toBePartiallyEqualsTo(array3);
-
-    expect(console.warn).toHaveBeenCalled();
   });
 });

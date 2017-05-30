@@ -31,14 +31,5 @@ describe('toEqualIgnoringCase', () => {
     expect('foo').toEqualIgnoringCase('foo');
 
     expect('foo').not.toEqualIgnoringCase('bar');
-
-    // Deprecated matcher
-    spyOn(console, 'warn');
-
-    expect('foo').toEqualsIgnoringCase('Foo');
-    expect('foo').toEqualsIgnoringCase('FOO');
-    expect('foo').toEqualsIgnoringCase('foo');
-    expect('foo').not.toEqualsIgnoringCase('bar');
-    expect(console.warn).toHaveBeenCalled();
   });
 });
